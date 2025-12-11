@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" type="image/png" href="assets/images/icon.png" />
+  </head>
+  <body>
+    <header>
+      <h1>Product Details</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html" data-open-cart>Cart</a>
+      </nav>
+    </header>
+
+    <div id="cart-sidebar-backdrop" class="cart-sidebar-backdrop">
+      <aside id="cart-sidebar" class="cart-sidebar">
+        <header class="cart-sidebar-header">
+          <h2>Your Cart</h2>
+          <button
+            type="button"
+            id="cart-sidebar-close"
+            class="icon-button"
+            aria-label="Close cart"
+          >
+            ✕
+          </button>
+        </header>
+
+        <div id="cart-sidebar-items" class="cart-sidebar-items"></div>
+
+        <footer class="cart-sidebar-footer">
+          <div class="cart-sidebar-total-row">
+            <span>Total:</span>
+            <span id="cart-sidebar-total">$0.00</span>
+          </div>
+          <a
+            href="cart.html"
+            class="btn btn-primary"
+            style="width: 100%; text-align: center"
+          >
+            View full cart
+          </a>
+        </footer>
+      </aside>
+    </div>
+
+    <div id="product-detail" class="product-detail"></div>
+    <div id="toast-container"></div>
+    <script src="assets/js/product.js"></script>
+    <script src="assets/js/productDetail.js"></script>
+    <script src="assets/js/cart.js"></script>
+  </body>
+</html>

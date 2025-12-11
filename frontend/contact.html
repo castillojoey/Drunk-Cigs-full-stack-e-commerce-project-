@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drunk Cigs – Contact</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" type="image/png" href="assets/images/icon.png" />
+  </head>
+  <body>
+    <header>
+      <h1>Contact</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html" data-open-cart>Cart</a>
+      </nav>
+    </header>
+
+    <main class="contact-page">
+      <section class="contact-intro">
+        <h2>Hit our inbox</h2>
+        <p>
+          Questions about sizing, shipping, bulk orders, or just want to say
+          what’s up? Drop a message and we’ll get back to you.
+        </p>
+
+        <div class="contact-details">
+          <p><strong>Email:</strong> support@drunkcigs.com</p>
+          <p><strong>Instagram:</strong> @drunkcigs</p>
+        </div>
+      </section>
+
+      <section class="contact-form-section">
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="reason">Reason</label>
+            <select id="reason">
+              <option value="general">General question</option>
+              <option value="order">Order / shipping question</option>
+              <option value="collab">Collab / wholesale</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              rows="4"
+              placeholder="Tell us what's up..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send message</button>
+        </form>
+      </section>
+    </main>
+
+    <div id="toast-container"></div>
+
+    <div id="cart-sidebar-backdrop" class="cart-sidebar-backdrop">
+      <aside id="cart-sidebar" class="cart-sidebar">
+        <header class="cart-sidebar-header">
+          <h2>Your Cart</h2>
+          <button
+            type="button"
+            id="cart-sidebar-close"
+            class="icon-button"
+            aria-label="Close cart"
+          >
+            ✕
+          </button>
+        </header>
+
+        <div id="cart-sidebar-items" class="cart-sidebar-items"></div>
+
+        <footer class="cart-sidebar-footer">
+          <div class="cart-sidebar-total-row">
+            <span>Total:</span>
+            <span id="cart-sidebar-total">$0.00</span>
+          </div>
+          <a
+            href="cart.html"
+            class="btn btn-primary"
+            style="width: 100%; text-align: center"
+          >
+            View full cart
+          </a>
+        </footer>
+      </aside>
+    </div>
+
+    <script src="assets/js/product.js"></script>
+    <script src="assets/js/cart.js"></script>
+
+    <script>
+      // simple front-end "fake send" to use your toast
+      const contactForm = document.getElementById("contact-form");
+      if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          if (typeof showToast === "function") {
+            showToast("Message sent! (demo only)");
+          }
+          contactForm.reset();
+        });
+      }
+    </script>
+  </body>
+</html>

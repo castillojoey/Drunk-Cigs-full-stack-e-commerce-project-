@@ -1,0 +1,69 @@
+<body>
+  <header>
+    <h1>Shop</h1>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" type="image/png" href="assets/images/icon.png" />
+
+    <nav>
+      <a href="index.html"> Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html" data-open-cart>Cart</a>
+    </nav>
+  </header>
+
+  <div id="products-grid" class="products-grid"></div>
+
+  <div id="quick-add-backdrop" class="modal-backdrop">
+    <div class="modal" id="quick-add-modal">
+      <button class="modal-close" id="quick-add-close">&times;</button>
+      <h2 id="quick-add-title"></h2>
+      <p id="quick-add-price" class="modal-price"></p>
+
+      <label for="quick-add-size">Size:</label>
+      <select id="quick-add-size"></select>
+      AC
+      <label for="quick-add-qty">Quantity:</label>
+      <input type="number" id="quick-add-qty" min="1" value="1" />
+
+      <button class="btn btn-primary" id="quick-add-submit">Add to Cart</button>
+    </div>
+  </div>
+
+  <div id="cart-sidebar-backdrop" class="cart-sidebar-backdrop">
+    <aside id="cart-sidebar" class="cart-sidebar">
+      <header class="cart-sidebar-header">
+        <h2>Your Cart</h2>
+        <button
+          type="button"
+          id="cart-sidebar-close"
+          class="icon-button"
+          aria-label="Close cart"
+        >
+          ✕
+        </button>
+      </header>
+
+      <div id="cart-sidebar-items" class="cart-sidebar-items"></div>
+      <div id="toast-container"></div>
+
+      <footer class="cart-sidebar-footer">
+        <div class="cart-sidebar-total-row">
+          <span>Total:</span>
+          <span id="cart-sidebar-total">$0.00</span>
+        </div>
+        <a
+          href="cart.html"
+          class="btn btn-primary"
+          style="width: 100%; text-align: center"
+        >
+          View full cart
+        </a>
+      </footer>
+    </aside>
+  </div>
+
+  <script src="assets/js/product.js"></script>
+  <script src="assets/js/shop.js"></script>
+  <script src="assets/js/cart.js"></script>
+</body>
