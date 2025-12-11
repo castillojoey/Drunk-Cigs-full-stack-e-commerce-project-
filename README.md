@@ -94,6 +94,7 @@ Shares rendering logic with the sidebar for consistency.
 Clean, simple UI focused on readability.
 
 Project Structure
+```text
 DrunkCigs/
 │
 ├── backend/
@@ -122,8 +123,7 @@ DrunkCigs/
 │   │       └── main.js            # Shared UI behaviors
 │
 └── .gitignore
-
-
+```
 
 Tech Stack
 Frontend
